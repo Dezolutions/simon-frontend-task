@@ -1,0 +1,56 @@
+.email-signup-banner {
+  .newsletter-form,
+  .newsletter-form__field-wrapper {
+    display: inline-block;
+  }
+
+  .email-signup-banner__box {
+    .email-signup-banner__heading {
+      margin-bottom: 0;
+    }
+
+    > * + .newsletter__subheading {
+      margin-top: 2rem;
+    }
+
+    .newsletter__subheading {
+      p {
+        margin: 0;
+      }
+    }
+  }
+
+  .banner__media {
+    overflow: hidden;
+  }
+
+  @media only screen and (min-width: 750px) {
+    .email-signup-banner__box {
+      width: 100%;
+    }
+  }
+}
+
+.email-signup-banner-background {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@media only screen and (min-width: 750px) {
+  .email-signup-banner-background-mobile {
+    display: none;
+  }
+
+  .banner--content-align-center .newsletter-form__message {
+    justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 749px) {
+  .email-signup-banner-background:not(.email-signup-banner-background-mobile) {
+    display: none;
+  }
+}

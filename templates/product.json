@@ -1,0 +1,132 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "vendor": {
+          "type": "text",
+          "settings": {
+            "text": "{{ product.vendor }}"
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "caption": {
+          "type": "text",
+          "settings": {
+            "text": "{{ product.metafields.descriptors.subtitle.value }}"
+          }
+        },
+        "10ada758-41cd-4fee-be1c-f4fcf9e636fc": {
+          "type": "inventory",
+          "settings": {
+            "inventory_threshold": 10,
+            "show_inventory_quantity": true
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button"
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": false,
+            "show_product_pickup_availability": false
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {}
+        },
+        "241125dd-b11f-4a10-ae73-0f7664cbc5ac": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Size chart",
+            "icon": "ruler",
+            "content": "",
+            "page": ""
+          }
+        },
+        "collapsible-row-0": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Materials",
+            "icon": "leather",
+            "content": "",
+            "page": ""
+          }
+        },
+        "collapsible-row-1": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Shipping & Returns",
+            "icon": "truck",
+            "content": "",
+            "page": ""
+          }
+        },
+        "collapsible-row-3": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Care Instructions",
+            "icon": "heart",
+            "content": "",
+            "page": ""
+          }
+        },
+        "50a40edc-2afa-4f53-b4d2-ada93569dc85": {
+          "type": "popup",
+          "settings": {
+            "text": "Size chart popup",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "vendor",
+        "title",
+        "caption",
+        "10ada758-41cd-4fee-be1c-f4fcf9e636fc",
+        "price",
+        "variant_picker",
+        "quantity_selector",
+        "buy_buttons",
+        "description",
+        "241125dd-b11f-4a10-ae73-0f7664cbc5ac",
+        "collapsible-row-0",
+        "collapsible-row-1",
+        "collapsible-row-3",
+        "50a40edc-2afa-4f53-b4d2-ada93569dc85"
+      ],
+      "settings": {
+        "enable_video_looping": false
+      }
+    },
+    "related-products": {
+      "type": "related-products",
+      "settings": {
+        "heading": "You may also like",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false
+      }
+    }
+  },
+  "order": ["main", "related-products"]
+}

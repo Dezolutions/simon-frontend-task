@@ -1,0 +1,51 @@
+{%- liquid
+  assign body_font_bold = settings.type_body_font | font_modify: 'weight', 'bold'
+  assign body_font_italic = settings.type_body_font | font_modify: 'style', 'italic'
+  assign body_font_bold_italic = body_font_bold | font_modify: 'style', 'italic'
+
+  comment
+    comment
+    	 Example off connect fonts with the different weight
+     endcomment
+    assign body_font_semi = settings.type_body_font | font_modify: 'weight', '600'
+    assign body_font_bold = settings.type_body_font | font_modify: 'weight', 'bold'
+  endcomment
+%}
+
+{%- unless settings.type_body_font.system? -%}
+  <link rel="preload" as="font" href="{{ settings.type_body_font | font_url }}" type="font/woff2" crossorigin>
+{%- endunless -%}
+{%- unless settings.type_header_font.system? -%}
+  <link rel="preload" as="font" href="{{ settings.type_header_font | font_url }}" type="font/woff2" crossorigin>
+{%- endunless -%}
+
+{% comment %}
+  {% comment %}Example off connect fonts with the google fonts{% endcomment %}
+  <link href="https://fonts.googleapis.com/css2?family={{ settings.type_header_font.family }}:wght@500;600;700;800&display=swap" rel="stylesheet">
+{% endcomment %}
+
+{% style %}
+  {{ settings.type_body_font | font_face: font_display: 'swap' }}
+  {{ body_font_bold | font_face: font_display: 'swap' }}
+  {{ body_font_italic | font_face: font_display: 'swap' }}
+  {{ body_font_bold_italic | font_face: font_display: 'swap' }}
+  {{ settings.type_header_font | font_face: font_display: 'swap' }}
+
+  :root {
+      --global-font-body-family: {{ settings.type_body_font.family }}, {{ settings.type_body_font.fallback_families }};
+      --global-font-heading-family: {{ settings.type_header_font.family }}, {{ settings.type_header_font.fallback_families }};
+      --global-font-body-scale: 1.0;
+      --global-font-heading-scale: 1.0;
+
+      --global-color-base-text: 18, 18, 18;
+      --global-color-background: 255, 255, 255;
+      --global-color-shadow: 18, 18, 18;
+
+  	--global-color-accent: 42, 159, 155;
+
+  	--global-color-solid-button-labels: 255, 255, 255;
+  	--global-color-outline-button-labels: 18, 18, 18;
+
+      --global-page-width: 120rem;
+  }
+{% endstyle %}

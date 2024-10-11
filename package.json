@@ -1,0 +1,49 @@
+{
+  "name": "Shopify-theme",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "run-p -sr webpack:watch",
+    "deploy": "run-s webpack:build && shopify theme push -e dev",
+    "build": "run-s webpack:build",
+    "webpack:watch": "cross-env NODE_ENV=development webpack --config ./webpack.dev.js --watch --progress",
+    "webpack:build": "cross-env NODE_ENV=production webpack --config ./webpack.prod.js --progress",
+    "shopify:dev": "shopify theme dev -e dev",
+    "shopify:dev:sync": "shopify theme dev -e dev --theme-editor-sync --live-reload=full-page",
+    "shopify:pull": "shopify theme pull -e dev",
+    "shopify:push": "shopify theme push -e dev",
+    "prettier:project": "npx prettier --w . --cache --plugin-search-dir=.",
+    "lint:liquid": "shopify theme check",
+    "lint:scss": "npx stylelint src/styles/**/*.scss"
+  },
+  "dependencies": {
+    "@shopify/theme-sections": "^4.1.1",
+    "swiper": "^8.4.5"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.17.10",
+    "@babel/plugin-transform-runtime": "^7.17.10",
+    "@babel/preset-env": "^7.17.10",
+    "@shopify/prettier-plugin-liquid": "^1.0.6",
+    "babel-loader": "^8.2.5",
+    "clean-webpack-plugin": "^4.0.0",
+    "cross-env": "^7.0.3",
+    "css-loader": "^6.7.1",
+    "css-minimizer-webpack-plugin": "^3.4.1",
+    "mini-css-extract-plugin": "^2.6.0",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.8.8",
+    "sass": "^1.51.0",
+    "sass-loader": "^12.6.0",
+    "source-map": "^0.7.3",
+    "stylelint": "^16.5.0",
+    "stylelint-config-standard-scss": "^13.1.0",
+    "stylelint-selector-bem-pattern": "^4.0.0",
+    "url-loader": "^4.1.1",
+    "webpack": "^5.72.0",
+    "webpack-cli": "^4.9.2",
+    "webpack-fix-style-only-entries": "^0.6.1",
+    "webpack-merge": "^5.8.0"
+  }
+}

@@ -1,0 +1,172 @@
+{% comment %} Liqud {% endcomment %}
+{%- assign productUpsale = collections.upsale.products.first -%}
+{%- assign productShow = false -%}
+
+{%- for item in cart.items -%}
+  {%- if item.id == productUpsale.selected_or_first_available_variant.id -%}
+    {%- assign productShow = true -%}
+    {%- break -%}
+  {%- endif -%}
+{%- endfor -%}
+{% comment %} Style {% endcomment %}
+<style>
+  .prod-up {
+    display: flex;
+  }
+
+  .prod-up__img {
+    margin-left: 10px;
+  }
+
+  .prod-up__info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .prod-up__title {
+    margin-top: 0;
+  }
+
+  .prod-up__price {
+    margin-top: auto;
+  }
+</style>
+
+{% comment %} HTML {% endcomment %}
+<div class="prod-up {% if productShow %}hidden{% endif %}">
+  <a href="{{- productUpsale.url -}}">
+    <img
+      class="prod-up__img"
+      src="{{- productUpsale.featured_image | image_url: width: 100 -}}"
+      alt="{{- productUpsale.name -}}"
+    >
+  </a>
+  <div class="prod-up__info">
+    <h5 class="prod-up__title">
+      {{- productUpsale.title -}}
+    </h5>
+    <span class="prod-up__price">{{- productUpsale.price | money -}}</span>
+    <button
+      type="button"
+      class="js-add-to-cart prod-up__btn button"
+      data-prod-quantity="1"
+      data-prod-id="{{- productUpsale.selected_or_first_available_variant.id -}}"
+    >
+      Add to cart
+    </button>
+  </div>
+</div>
+
+<script>
+  const addToCartBtn = document.querySelector('.js-add-to-cart');
+  const prodId = addToCartBtn.dataset.prodId;
+  const prodQuantity = addToCartBtn.dataset.prodQuantity;
+
+  const formData = {
+    items: [
+      {
+        id: +prodId,
+        quantity: +prodQuantity,
+      },
+    ],
+  };
+
+  function updateCartSections() {
+    fetch('/cart.json')
+      .then((response) => response.text())
+      .then((state) => {
+        const parsedState = JSON.parse(state);
+        const cartItems = document.querySelector('cart-items');
+        const cartDrawerItems = document.querySelector('cart-drawer-items');
+
+        if (!!cartItems) {
+          const cartFooter = document.getElementById('main-cart-footer');
+          cartItems.classList.add('loading');
+          // on cart page -- update cart items
+          fetch('/?sections=main-cart-items')
+            .then((response) => response.json())
+            .then((responseJson) => {
+              const mainCartItemsParser = new DOMParser().parseFromString(responseJson['main-cart-items'], 'text/html');
+              const mainCartItemsHtml = mainCartItemsParser.querySelector('.js-contents').innerHTML;
+
+              document.getElementById('main-cart-items').innerHTML = mainCartItemsHtml;
+              cartItems.classList.toggle('is-empty', parsedState.item_count === 0);
+
+              if (cartFooter) {
+                cartFooter.classList.toggle('is-empty', parsedState.item_count === 0);
+              }
+            })
+            .catch((error) => {
+              console.error('Error:', error);
+            })
+            .finally(() => {
+              document.querySelector('cart-items').classList.remove('loading');
+            });
+        }
+
+        if (!!cartDrawerItems) {
+          cartDrawerItems.classList.add('loading');
+          // not on cart page -- update cart drawer
+          fetch('/?sections=cart-drawer')
+            .then((response) => response.json())
+            .then((responseJson) => {
+              const cartDrawerParser = new DOMParser().parseFromString(responseJson['cart-drawer'], 'text/html');
+              const cartDrawerInnerHtml = cartDrawerParser.querySelector('.drawer__inner').innerHTML;
+
+              document.querySelector('.drawer__inner').innerHTML = cartDrawerInnerHtml;
+
+              if (parsedState.item_count == 0) {
+                document.querySelector('cart-drawer').classList.add('is-empty');
+              }
+            })
+            .catch((error) => {
+              console.error('Error:', error);
+            })
+            .finally(() => {
+              document.querySelector('cart-drawer-items').classList.remove('loading');
+            });
+        }
+
+        // update cart count in header
+        fetch('/?sections=cart-icon-bubble')
+          .then((response) => response.json())
+          .then((responseJson) => {
+            const cartCountBubbleParser = new DOMParser().parseFromString(
+              responseJson['cart-icon-bubble'],
+              'text/html'
+            );
+            const cartCountBubbleElement = cartCountBubbleParser.querySelector('.cart-count-bubble');
+
+            if (!!cartCountBubbleElement) {
+              document.querySelector('.cart-count-bubble').innerHTML = cartCountBubbleElement.innerHTML;
+            } else if (document.querySelector('.cart-count-bubble')) {
+              document.querySelector('.cart-count-bubble').innerHTML = '';
+            }
+          })
+          .catch((error) => {
+            console.error('Error:', error);
+          });
+      });
+  }
+
+  window.addEventListener('DOMContentLoaded', () => {
+    addToCartBtn.addEventListener('click', () => {
+      fetch(window.Shopify.routes.root + 'cart/add.js', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      })
+        .then((response) => response.json())
+        .then((cart) => {
+          if (cart.items.length) {
+            updateCartSections();
+          }
+        })
+        .catch((error) => {
+          console.error('Error:', error);
+        });
+    });
+  });
+</script>
