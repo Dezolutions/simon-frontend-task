@@ -33,5 +33,6 @@
 }
 .featured-product__quick-add-btn {
   border-radius: 12px;
-  background-color: #fff;
+  background-color: #3C3C43;
+  border: 1px solid;
 }
