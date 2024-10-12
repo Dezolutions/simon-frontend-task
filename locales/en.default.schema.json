@@ -180,6 +180,14 @@
     }
   },
   "sections": {
+    "featured_products": {
+      "name": "Featured Products",
+      "settings": {
+        "header": {
+          "content": "Section settings"
+        }
+      }
+    },
     "all": {
       "animation": {
         "content": "Animations",
