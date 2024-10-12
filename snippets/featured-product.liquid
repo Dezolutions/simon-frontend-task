@@ -7,13 +7,15 @@
 
 <div class="featured-product" tabindex="0">
   {% if product.selected_or_first_available_variant.featured_image != null %}
-    <img src="{{ product.selected_or_first_available_variant.featured_image | img_url: '400x' }}"
-      sizes="(max-width: 600px) 400px,
-              (max-width: 1024px) 600px,
-              1024px"
-      alt="{{ product.featured_image.alt }}"
-      class="featured-product__img"
-      />
+    <div class="featured">
+      <img src="{{ product.selected_or_first_available_variant.featured_image | img_url: '400x' }}"
+        sizes="(max-width: 600px) 400px,
+                (max-width: 1024px) 600px,
+                1024px"
+        alt="{{ product.featured_image.alt }}"
+        class="featured-product__img"
+        />
+    </div>
   {% else %}
     <div class="aspect-square">{{ 'product-1' | placeholder_svg_tag }}</div>
   {% endif %}
