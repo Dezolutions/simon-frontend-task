@@ -102,11 +102,9 @@
   .article-card__image--small .ratio::before {
     padding-bottom: 14.3rem;
   }
-
   .article-card__image--medium .ratio::before {
     padding-bottom: 21.9rem;
   }
-
   .article-card__image--large .ratio::before {
     padding-bottom: 27.5rem;
   }
@@ -115,11 +113,9 @@
   .article-card__image--small .ratio::before {
     padding-bottom: 17.7rem;
   }
-
   .article-card__image--medium .ratio::before {
     padding-bottom: 30.7rem;
   }
-
   .article-card__image--large .ratio::before {
     padding-bottom: 40.7rem;
   }
@@ -129,7 +125,6 @@
   .articles-wrapper.grid {
     margin: 0 0 5rem 0;
   }
-
   @media screen and (min-width: 750px) {
     .articles-wrapper.grid {
       margin-bottom: 7rem;

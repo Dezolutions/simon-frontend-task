@@ -201,7 +201,6 @@ cart-drawer-items {
   cart-drawer-items {
     overflow: visible;
   }
-
   .drawer__inner {
     overflow: scroll;
   }
@@ -247,10 +246,6 @@ cart-drawer-items {
 
 .cart-drawer .cart-items th {
   border-bottom: 0.1rem solid rgba(var(--color-foreground), 0.08);
-}
-
-.cart-drawer .cart-item:last-child {
-  margin-bottom: 1.5rem;
 }
 
 .cart-drawer .cart-item .loading-overlay {
@@ -361,7 +356,6 @@ cart-drawer-items {
     flex-basis: calc(33.3333333333% - 0.5rem) !important;
     margin: 0 !important;
   }
-
   .drawer__footer #dynamic-checkout-cart ul > li:first-child:nth-last-child(2),
 .drawer__footer #dynamic-checkout-cart ul > li:first-child:nth-last-child(2) ~ li,
 .drawer__footer #dynamic-checkout-cart ul > li:first-child:nth-last-child(4),

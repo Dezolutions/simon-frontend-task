@@ -31,11 +31,10 @@
   left: 50%;
   transform: translateX(-50%);
   margin: var(--modal-height-offset) auto 0;
-  width: 100%;
+  width: calc(100% - 3rem);
   background-color: rgb(var(--color-background));
   overflow: hidden;
   max-width: var(--global-page-width);
-  width: calc(100% - 3rem);
 }
 .quick-add-modal__content img {
   max-width: 100%;
@@ -62,10 +61,9 @@
 
 .quick-add-modal__content-info {
   --modal-padding: 2.5rem;
-  padding-right: 4.4rem;
+  padding: var(--modal-padding, 4.4rem);
   display: flex;
   overflow-y: auto;
-  padding: var(--modal-padding);
   height: 100%;
 }
 .quick-add-modal__content-info > * {
