@@ -2,7 +2,7 @@
 {% liquid
 
   assign product_price = product.price | money_without_trailing_zeros | split: ' '
-  assign product_price = product.compare_at_price | money_without_trailing_zeros | split: ' '
+  assign product_compare_at_price = product.compare_at_price | money_without_trailing_zeros | split: ' '
 %}
 
 <div class="featured-product" tabindex="0">
@@ -23,7 +23,7 @@
     <h3 class="featured-product__title">{{ product.title }}</h3>
     <p class="featured-product__price">
       {% if product.price < product.compare_at_price %}
-        <span class="price__compare-item">{{ product.compare_at_price | money_without_trailing_zeros }}</span>
+        <span class="price__compare-item">{{ product_compare_at_price[0] }}</span>
       {% endif %}
       <span class="price__item">{{ product_price[0] }}</span>
     </p>
