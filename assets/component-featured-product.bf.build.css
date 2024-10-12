@@ -45,3 +45,7 @@
   display: flex;
   gap: 8px;
 }
+.featured-product__tag {
+  padding: 8px 12px;
+  border-radius: 100px;
+}
