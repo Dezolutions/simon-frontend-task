@@ -44,6 +44,7 @@
 .featured-product__tags {
   display: flex;
   gap: 8px;
+  margin-bottom: 16px;
 }
 .featured-product__tag {
   padding: 8px 12px;
