@@ -32,6 +32,9 @@
   margin-bottom: 16px;
 }
 .featured-product__quick-add-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
   border-radius: 12px;
   background-color: #3C3C43;
@@ -46,6 +49,7 @@
 }
 .featured-product__quick-add-btn:hover {
   color: #3C3C43;
+  background-color: #fff;
 }
 .featured-product__tags {
   display: flex;
