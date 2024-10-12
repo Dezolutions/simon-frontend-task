@@ -39,6 +39,9 @@
   border-radius: 0 0 12px 12px;
   transition: all 0.3s ease;
 }
+.featured-product__second-layout .featured-product__info {
+  border-radius: 0 0 12px 12px;
+}
 .featured-product__title {
   margin: 0;
   margin-bottom: 4px;
