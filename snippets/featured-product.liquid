@@ -1,5 +1,5 @@
-<div class="swiper-slide text-center border-4 rounded border-light-beige bg-featured">
-  <variant-swatch class="p-[19px] flex flex-col justify-between h-full">
+<div class="swiper-slide">
+  <variant-swatch class="">
     <a href="{{ product.url }}">
       {% if product.selected_or_first_available_variant.featured_image != null %}
         <img src="{{ product.selected_or_first_available_variant.featured_image | img_url: '500x' }}"
@@ -7,7 +7,7 @@
                   (max-width: 1024px) 600px,
                   1024px"
           alt="{{ product.featured_image.alt }}"
-          class="featured-product-img rounded aspect-square object-cover object-center"
+          class="featured-product-img"
           />
       {% else %}
         <div class="aspect-square">{{ 'product-1' | placeholder_svg_tag }}</div>
