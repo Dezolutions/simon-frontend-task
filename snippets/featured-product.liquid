@@ -56,7 +56,7 @@
     {% endif %} {% endcomment %}
     <div class="featured-product__tags">
       {% for tag in product.tags %}
-        <p>{{ tag }}</p>
+        <span class="featured-product__tag">{{ tag }}</span>
       {% endfor %}
     </div>
     <product-form>
