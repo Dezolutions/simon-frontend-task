@@ -5,7 +5,7 @@
   assign product_compare_at_price = product.compare_at_price | money_without_trailing_zeros | split: ' '
 %}
 
-<div class="featured-product {% if products_per_row_desktop == 2 %} {% endif %}" tabindex="0">
+<div class="featured-product {% if products_per_row_desktop == 2 %} featured-product__{% endif %}" tabindex="0">
   {% if product.selected_or_first_available_variant.featured_image != null %}
     <div class="featured-product__img-wrapper">
       <img src="{{ product.selected_or_first_available_variant.featured_image | img_url: '400x' }}"
