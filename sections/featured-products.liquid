@@ -7,8 +7,8 @@
     </h2>
   {% endif %}
 
-  <div class="featured">
-    <div class="swiper-wrapper-element swiper-wrapper">
+  <div class="featured-products__block">
+    <div class="featured-products">
       {% for product in section.settings.collection.products %}
         {% render 'featured-product', product: product %}
       {% endfor %}
