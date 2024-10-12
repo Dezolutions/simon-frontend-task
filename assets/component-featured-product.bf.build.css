@@ -4,6 +4,9 @@
   flex-direction: column;
   transition: all 0.3s ease;
 }
+.featured-product:hover .featured-product__info {
+  background-color: #FDDDDD;
+}
 .featured-product__img {
   width: 100%;
   border-radius: 1.2rem 1.2rem 0 0;
