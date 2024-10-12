@@ -26,6 +26,9 @@
   margin-bottom: 16px;
   color: #181818;
 }
+.featured-product__descr {
+  color: #666666;
+}
 .featured-product__divider {
   display: block !important;
   visibility: inherit !important;
