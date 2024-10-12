@@ -27,6 +27,10 @@
   object-position: center center;
   background-color: #DEDEDE;
 }
+.featured-product__second-layout .featured-product__img {
+  width: 144px;
+  height: 100%;
+}
 .featured-product__info {
   padding: 2.4rem;
   background-color: #F8F8F8;
