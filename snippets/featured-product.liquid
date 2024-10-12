@@ -43,7 +43,7 @@
         {% endif %}
       {% endfor %}
       {% if tagCount > 0 %}
-        <span class="featured-product__tag">{{ tag }}</span>
+        <span class="featured-product__tag">{{ tagCount | prepend: '+' }}</span>
       {% endif %}
     </div>
     <product-form>
