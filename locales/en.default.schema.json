@@ -187,8 +187,12 @@
           "content": "Section settings"
         },
         "title": {
-          "label": ""
-        }
+          "label": "Section title"
+        },
+        "collection": {
+          "label": "Collection"
+        },
+        
       }
     },
     "all": {
