@@ -1,6 +1,7 @@
-@charset "UTF-8";
 .featured-products__block {
-  display: ад;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
   gap: 5.1rem;
 }
 .featured-products__desktop-cols-2 {
