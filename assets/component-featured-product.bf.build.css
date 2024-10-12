@@ -4,7 +4,7 @@
   flex-direction: column;
   transition: all 0.3s ease;
 }
-.featured-product:hover .featured-product__info {
+.featured-product:hover .featured-product__info, .featured-product:hover .featured-product__quick-add-btn {
   background-color: #FDDDDD;
 }
 .featured-product__img {
