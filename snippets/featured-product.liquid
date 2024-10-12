@@ -36,12 +36,14 @@
     <div class="featured-product__tags">
       {% assign tagCount = 0 %}
       {% for tag in product.tags %}
+
         {% if forloop.index > 2 %}
           {% assign tagCount = tagCount | plus: 1 %}
         {% else %}
           <span class="featured-product__tag">{{ tag }}</span>
         {% endif %}
       {% endfor %}
+
       {% if tagCount > 0 %}
         <span class="featured-product__tag">{{ tagCount | prepend: '+' }}</span>
       {% endif %}
