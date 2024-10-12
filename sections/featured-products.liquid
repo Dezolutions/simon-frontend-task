@@ -1,27 +1,6 @@
 <section
   class="featured-products-{{ section.id }}"
 >
-
-  {% if section.settings.bg_image != blank %}
-    <img
-      class="absolute top-0 left-0 z-[-1] w-full"
-      loading="lazy"
-      alt="{{ section.settings.bg_image.alt | strip_html | escape }}"
-      src="{{ section.settings.bg_image | image_url: width: 1440 }}"
-      srcset="
-        {{ section.settings.bg_image | img_url: '90x' }} 90w,
-        {{ section.settings.bg_image | img_url: '180x' }} 180w,
-        {{ section.settings.bg_image | img_url: '360x' }} 360w,
-        {{ section.settings.bg_image | img_url: '540x' }} 540w,
-        {{ section.settings.bg_image | img_url: '720x' }} 720w,
-        {{ section.settings.bg_image | img_url: '1080x' }} 1080w,
-        {{ section.settings.bg_image | img_url: '1440x' }} 1440w,
-        {{ section.settings.bg_image | img_url: '1980x' }} 1980w
-      "
-      sizes="(min-width: 767px), 90vw,
-            100vw"/>
-  {% endif %}
-
   {% if section.settings.title != blank %}
     <h2 class="">
       {{ section.settings.title }}
