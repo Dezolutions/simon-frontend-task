@@ -32,43 +32,13 @@
     {% unless products_per_row_desktop == '2' %}
       <p class="featured-product__descr">{{ product.description | truncate: 100, '...' }}</p>
       <div class="featured-product__divider"></div>
-    {% endunless %}
-    {% comment %} {% if product.variants.size > 1 %}
-      <div class="relative">
-        <select
-          name="options"
-          class="featured-product-options"
-        >
-          {%- for variant in product.variants -%}
-            {% if variant.available %}
-              <option
-                {% if variant == product.selected_or_first_available_variant %}
-                  selected="selected"
-                {% endif %}
-                {% if variant.available == false %}
-                  disabled
-                {% endif %}
-                value="{{ variant.price | money }}"
-                data-variant-id="{{ variant.id }}"
-                data-product-variant-img="{{ variant.featured_image | img_url: '600x' }}"
-                data-variant-price="{{ variant.price | money }}"
-              >
-                {{ variant.title }}
-              </option>
-            {% endif %}
-          {%- endfor -%}
-        </select>
-
-        <svg class="" width="19" height="10" viewBox="0 0 19 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M1 1L9.5 8L18 1" stroke="#242323" stroke-width="2" stroke-linecap="round"/>
-        </svg>
-      </div>
-    {% endif %} {% endcomment %}
-    <div class="featured-product__tags">
+      <div class="featured-product__tags">
       {% for tag in product.tags %}
         <span class="featured-product__tag">{{ tag }}</span>
       {% endfor %}
     </div>
+    {% endunless %}
+
     <product-form>
       {%- form 'product',
         product,
