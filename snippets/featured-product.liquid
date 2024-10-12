@@ -1,4 +1,4 @@
-<div class="swiper-slide">
+<div class="">
   <variant-swatch class="">
     <a href="{{ product.url }}">
       {% if product.selected_or_first_available_variant.featured_image != null %}
@@ -53,7 +53,7 @@
       data-cart-add="{{ product.selected_or_first_available_variant.id }}"
       type="submit"
       name="add"
-      class="featured-product-atc bg-atc border-2 rounded border-cool flex justify-center items-center py-5 w-full h-[49px] leading-[17.95px] text-sm font-medium font-futura transition-all hover:translate-x-[-5px] hover:translate-y-[-5px] hover:shadow-custom"
+      class=""
     >
       <span class="featured-product-price leading-[17.95px]">{{ product.selected_or_first_available_variant.price | money }}</span>
       <span class="leading-[17.95px]">&nbsp;|&nbsp;</span>
