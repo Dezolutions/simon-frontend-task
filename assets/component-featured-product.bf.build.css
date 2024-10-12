@@ -52,6 +52,7 @@
 .featured-product__price, .featured-product__descr {
   font-size: 14px;
   line-height: 17.6px;
+  margin: 0;
   margin-bottom: 16px;
   color: #181818;
 }
