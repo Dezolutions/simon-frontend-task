@@ -183,7 +183,7 @@
     "featured_products": {
       "name": "Featured Products",
       "settings": {
-        "header": {
+        "section_settings": {
           "content": "Section settings"
         },
         "title": {
