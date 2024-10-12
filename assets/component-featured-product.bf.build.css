@@ -116,4 +116,9 @@
   .featured-product__second-layout .featured-product__divider, .featured-product__second-layout .featured-product__tags {
     display: block !important;
   }
+  .featured-product__second-layout .featured-product__img-wrapper {
+    width: 144px;
+    height: 100%;
+    border-radius: 12px 0 0 12px;
+  }
 }
