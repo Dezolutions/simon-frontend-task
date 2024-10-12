@@ -95,6 +95,10 @@ html.no-js .no-js-hidden {
   display: none !important;
 }
 
+p {
+  margin: 0;
+}
+
 .page-width {
   max-width: var(--global-page-width);
   margin: 0 auto;
