@@ -1,0 +1,135 @@
+<div
+  data-section-type="featured-products"
+  data-section-id="{{ section.id }}"
+  class="mx-auto px-4 sm:px-6 relative"
+>
+
+  {% if section.settings.bg_image != blank %}
+    <img
+      class="absolute top-0 left-0 z-[-1] w-full"
+      loading="lazy"
+      alt="{{ section.settings.bg_image.alt | strip_html | escape }}"
+      src="{{ section.settings.bg_image | image_url: width: 1440 }}"
+      srcset="
+        {{ section.settings.bg_image | img_url: '90x' }} 90w,
+        {{ section.settings.bg_image | img_url: '180x' }} 180w,
+        {{ section.settings.bg_image | img_url: '360x' }} 360w,
+        {{ section.settings.bg_image | img_url: '540x' }} 540w,
+        {{ section.settings.bg_image | img_url: '720x' }} 720w,
+        {{ section.settings.bg_image | img_url: '1080x' }} 1080w,
+        {{ section.settings.bg_image | img_url: '1440x' }} 1440w,
+        {{ section.settings.bg_image | img_url: '1980x' }} 1980w
+      "
+      sizes="(min-width: 767px), 90vw,
+            100vw"/>
+  {% endif %}
+
+  {% if section.settings.title != blank %}
+    <h2 class="font-adorn-condensed-sans text-[42px] md:text-[66px] text-center mb-[62px] md:mb-[24px]">
+      {{ section.settings.title }}&nbsp;
+      {% if section.settings.highlighted_word != blank %}
+        <span class="highlighted-word-{{ section.id }}">{{ section.settings.highlighted_word }}</span>
+      {% endif %}
+    </h2>
+  {% endif %}
+  <!-- Slider main container -->
+  <div class="swiper">
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper-element swiper-wrapper md:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 md:gap-8">
+      <!-- Slides -->
+      {% for product in section.settings.collection.products %}
+        {% render 'featured-product', product: product %}
+      {% endfor %}
+    </div>
+    <!-- If we need pagination -->
+    <div class="swiper-pagination static mt-[19px] [&>.swiper-pagination-bullet]:bg-inactive-bullet [&>.swiper-pagination-bullet]:w-[10px] [&>.swiper-pagination-bullet]:h-[10px] [&>.swiper-pagination-bullet]:opacity-100 md:hidden"></div>
+  </div>
+</div>
+
+{% style %}
+  [data-section-type="featured-products"] {
+    padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
+  }
+
+  @media screen and (max-width:768px) {
+    [data-section-type="featured-products"] {
+      padding-top: {{ section.settings.padding_top | divided_by: 2}}px;
+      padding-bottom: {{ section.settings.padding_bottom | divided_by: 2 }}px;
+    }
+
+    .highlighted-word-{{ section.id }} {
+      color: {{ section.settings.highlighted_color }};
+      text-shadow: 2px 1px 0px black;
+    }
+  }
+
+{% endstyle %}
+{% schema %}
+  {
+    "name": "Featured Products",
+    "tag": "section",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Section settings"
+      },
+      {
+        "type": "image_picker",
+        "id": "bg_image",
+        "label": "Section background"
+      },
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Section title"
+      },
+      {
+        "type": "text",
+        "id": "highlighted_word",
+        "label": "Highlighted word",
+        "info": "Add highlighted word at the and of the title. Highlighted color will be applied on mobile"
+      },
+      {
+        "type": "color",
+        "id": "highlighted_color",
+        "label": "Highlighted color",
+        "default": "#FFFFFF"
+      },
+      {
+        "type": "collection",
+        "id": "collection",
+        "label": "Collection"
+      },
+      {
+        "type": "header",
+        "content": "Section padding"
+      },
+      {
+        "type": "range",
+        "id": "padding_top",
+        "label": "Padding top",
+        "default": 50,
+        "min": 0,
+        "max": 100,
+        "step": 2,
+        "unit": "px"
+      },
+      {
+        "type": "range",
+        "id": "padding_bottom",
+        "label": "Padding bottom",
+        "default": 50,
+        "min": 0,
+        "max": 100,
+        "step": 2,
+        "unit": "px"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Featured Products"
+      }
+    ]
+  }
+{% endschema %}
