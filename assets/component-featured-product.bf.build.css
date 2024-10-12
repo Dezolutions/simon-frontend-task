@@ -44,6 +44,7 @@
   width: 112px;
   height: 31px;
   font-size: 12px;
+  font-family: var(--global-font-body-family);
   line-height: 15.08px;
   transition: all 0.3s ease;
 }
