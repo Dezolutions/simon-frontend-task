@@ -5,9 +5,6 @@
 %}
 
 <div class="featured-product" tabindex="0">
-{% for item in product_price %}
-  <p>{{ item }}</p>
-{% endfor %}
   {% if product.selected_or_first_available_variant.featured_image != null %}
     <img src="{{ product.selected_or_first_available_variant.featured_image | img_url: '400x' }}"
       sizes="(max-width: 600px) 400px,
@@ -27,7 +24,7 @@
       {% if product.price < product.compare_at_price %}
         <span class="price__compare-item">{{ product.compare_at_price | money_without_trailing_zeros }}</span>
       {% endif %}
-      <span class="price__item">{{ product_price[0] }}{{ product_price[1] }}</span>
+      <span class="price__item">{{ product_price[0] }}</span>
     </p>
     <p class="featured-product__descr">{{ product.description }}</p>
     <div class="featured-product__divider"></div>
