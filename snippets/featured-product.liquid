@@ -17,7 +17,7 @@
   <div class="featured-product__info">
     <h3 class="">{{ product.title }}</h3>
     {% render 'price' product: product %}
-    <p></p>
+    <p>{{ product.description }}</p>
     {% comment %} {% if product.variants.size > 1 %}
       <div class="relative">
         <select
@@ -49,7 +49,7 @@
         </svg>
       </div>
     {% endif %} {% endcomment %}
-
+    
     <button
       data-cart-add="{{ product.selected_or_first_available_variant.id }}"
       type="submit"
