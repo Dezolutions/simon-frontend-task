@@ -117,8 +117,8 @@
     display: block !important;
   }
   .featured-product__second-layout .featured-product__img-wrapper {
-    width: 144px;
-    height: 100%;
+    width: 100%;
+    height: 222px;
     border-radius: 12px 0 0 12px;
   }
 }
