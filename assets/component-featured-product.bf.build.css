@@ -108,5 +108,6 @@
   .featured-product,
 .featured-product__second-layout {
     flex-direction: column;
+    height: auto;
   }
 }
