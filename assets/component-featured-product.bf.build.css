@@ -19,15 +19,15 @@
   height: 222px;
   display: flex;
   overflow: hidden;
+  border-radius: 1.2rem 1.2rem 0 0;
 }
 .featured-product__img {
   width: 100%;
-  border-radius: 1.2rem 1.2rem 0 0;
   object-fit: cover;
   object-position: center center;
   background-color: #DEDEDE;
 }
-.featured-product__second-layout .featured-product__img {
+.featured-product__second-layout .featured-product__img-wrapper {
   width: 144px;
   height: 100%;
 }
