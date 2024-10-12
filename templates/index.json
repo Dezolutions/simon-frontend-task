@@ -28,7 +28,7 @@
           "type": "buttons",
           "settings": {
             "button_label_1": "Shop all",
-            "button_link_1": "shopify://collections/all"
+            "button_link_1": "shopify:\/\/collections\/all"
           }
         }
       },
@@ -42,22 +42,9 @@
         "image_height": "large",
         "desktop_content_position": "bottom-center"
       }
-    },
-    "featured_products_B6bqYm": {
-      "type": "featured-products",
-      "settings": {
-        "title": "",
-        "collection": "peanuts",
-        "number_of_displayed_products": 12,
-        "products_per_row_desktop": "3",
-        "products_per_row_mobile": "1",
-        "padding_top": 50,
-        "padding_bottom": 50
-      }
     }
   },
   "order": [
-    "image_banner",
-    "featured_products_B6bqYm"
+    "image_banner"
   ]
 }
