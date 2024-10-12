@@ -24,6 +24,7 @@ if (!customElements.get('product-form')) {
 
         this.submitButton.setAttribute('aria-disabled', true);
         this.submitButton.classList.add('loading');
+        this.submitButtonText.classList.add('hidden')
         this.querySelector('.loading-overlay__spinner').classList.remove('hidden');
 
         const config = fetchConfig('javascript');
