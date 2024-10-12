@@ -7,6 +7,9 @@
 .featured-product:hover .featured-product__info, .featured-product:hover .featured-product__quick-add-btn {
   background-color: #FDDDDD;
 }
+.featured-product:hover .featured-product__quick-add-btn {
+  color: #3C3C43;
+}
 .featured-product__img {
   width: 100%;
   border-radius: 1.2rem 1.2rem 0 0;
