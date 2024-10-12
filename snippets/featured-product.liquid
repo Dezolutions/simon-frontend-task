@@ -1,4 +1,8 @@
 
+{% liquid
+
+  assign product_price = pro
+%}
 <div class="featured-product">
   {% if product.selected_or_first_available_variant.featured_image != null %}
     <img src="{{ product.selected_or_first_available_variant.featured_image | img_url: '400x' }}"
