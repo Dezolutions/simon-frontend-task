@@ -184,7 +184,7 @@
       "name": "Featured Products",
       "settings": {
         "section_settings": {
-          "content": "Section settingss"
+          "content": "Section settings"
         },
         "title": {
           "label": "Section title"
@@ -197,9 +197,6 @@
         },
         "products_per_row_desktop": {
           "label": "Products per row on desktop"
-        },
-        "products_per_row_mobile": {
-          "label": "Products per row on mobile"
         },
         "section_padding": {
           "content": "Section padding"
