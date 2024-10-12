@@ -48,4 +48,5 @@
 .featured-product__tag {
   padding: 8px 12px;
   border-radius: 100px;
+  border: 1px solid;
 }
