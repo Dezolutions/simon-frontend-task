@@ -39,4 +39,9 @@
   width: 112px;
   height: 31px;
   font-size: 12px;
+  line-height: 15.08px;
+}
+.featured-product__tags {
+  display: flex;
+  gap: 10px;
 }
