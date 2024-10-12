@@ -192,7 +192,9 @@
         "collection": {
           "label": "Collection"
         },
-        
+        "number_of_displayed_products": {
+          "label": "Number of displayed products"
+        }
       }
     },
     "all": {
