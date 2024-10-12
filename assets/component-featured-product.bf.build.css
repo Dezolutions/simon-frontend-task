@@ -44,6 +44,9 @@
   line-height: 15.08px;
   transition: all 0.3s ease;
 }
+.featured-product__quick-add-btn:hover {
+  color: #3C3C43;
+}
 .featured-product__tags {
   display: flex;
   gap: 8px;
