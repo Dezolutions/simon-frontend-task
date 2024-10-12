@@ -203,6 +203,12 @@
         },
         "section_padding": {
           "content": "Section padding"
+        },
+        "padding_top": {
+          "label": "Padding top"
+        },
+        "padding_top": {
+          "label": "Padding top"
         }
       }
     },
