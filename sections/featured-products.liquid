@@ -35,7 +35,7 @@
   <!-- Slider main container -->
   <div class="swiper">
     <!-- Additional required wrapper -->
-    <div class="swiper-wrapper-element swiper-wrapper md:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 md:gap-8">
+    <div class="swiper-wrapper-element swiper-wrapper">
       <!-- Slides -->
       {% for product in section.settings.collection.products %}
         {% render 'featured-product', product: product %}
