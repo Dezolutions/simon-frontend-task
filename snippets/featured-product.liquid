@@ -39,9 +39,10 @@
         
         {% if forloop.index > 2 %}
           {% assign tagCount = tagCount | plus: 1 %}
-        {}
+        {% else %}
+          <span class="featured-product__tag">{{ tag }}</span>
         {% endif %}
-        <span class="featured-product__tag">{{ tag }}</span>
+        
       {% endfor %}
     </div>
     <product-form>
