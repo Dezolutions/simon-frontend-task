@@ -1,6 +1,4 @@
-<div
-  data-section-type="featured-products"
-  data-section-id="{{ section.id }}"
+<section
   class="mx-auto px-4 sm:px-6 relative"
 >
 
@@ -44,7 +42,7 @@
     <!-- If we need pagination -->
     <div class="swiper-pagination static mt-[19px] [&>.swiper-pagination-bullet]:bg-inactive-bullet [&>.swiper-pagination-bullet]:w-[10px] [&>.swiper-pagination-bullet]:h-[10px] [&>.swiper-pagination-bullet]:opacity-100 md:hidden"></div>
   </div>
-</div>
+</section>
 
 {% style %}
   [data-section-type="featured-products"] {
@@ -56,7 +54,6 @@
     [data-section-type="featured-products"] {
       padding-top: {{ section.settings.padding_top }}px;
       padding-bottom: {{ section.settings.padding_bottom }}px;
-      
     }
   }
 
