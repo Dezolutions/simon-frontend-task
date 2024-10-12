@@ -4,9 +4,3 @@
   flex-wrap: wrap;
   gap: 5.1rem;
 }
-.featured-products__desktop-cols-2 {
-  grid-template-columns: repeat(2, 1fr);
-}
-.featured-products__desktop-cols-3 {
-  grid-template-columns: repeat(3, 1fr);
-}
