@@ -104,6 +104,10 @@
   display: none !important;
 }
 
+.price__compare-item {
+  text-decoration: line-through;
+}
+
 @media screen and (max-width: 768px) {
   .featured-product {
     flex-direction: column;
