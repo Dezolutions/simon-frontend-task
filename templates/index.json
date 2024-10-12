@@ -47,7 +47,10 @@
       "type": "featured-products",
       "settings": {
         "title": "",
-        "collection": "all",
+        "collection": "peanuts",
+        "number_of_displayed_products": 12,
+        "products_per_row_desktop": "3",
+        "products_per_row_mobile": "1",
         "padding_top": 50,
         "padding_bottom": 50
       }
