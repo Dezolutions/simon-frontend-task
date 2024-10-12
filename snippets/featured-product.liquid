@@ -28,7 +28,7 @@
         {% if product.price < product.compare_at_price %}
           <span class="price__compare-item">{{ product_compare_at_price[0] }}</span>
         {% endif %}
-        <span class="price__item">{{ product_price[0] }}</span>
+        <span class="price__item ">{{ product_price[0] }}</span>
       </p>
       <div class="featured-product__descr">{{ product.description | truncate: 60, '...' }}</div>
     </div>
@@ -36,6 +36,7 @@
     <div class="featured-product__tags">
 
       {% assign tagCount = 0 %}
+
       {% for tag in product.tags %}
         {% if forloop.index > 2 %}
           {% assign tagCount = tagCount | plus: 1 %}
