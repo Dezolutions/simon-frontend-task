@@ -17,9 +17,9 @@
     <h3 class="featured-product__title">{{ product.title }}</h3>
     <p class="featured-product__price">
       {% if product.price < product.compare_at_price %}
-        <span class="price__compare-item">{{ product.compare_at_price | money }}</span>
+        <span class="price__compare-item">{{ product.compare_at_price | money_ }}</span>
       {% endif %}
-      <span class="price__item">{{ product.price | money }}</span>
+      <span class="price__item">{{ product.price  | money_without_currency }}</span>
     </p>
     <p>{{ product.description }}</p>
     {% comment %} {% if product.variants.size > 1 %}
