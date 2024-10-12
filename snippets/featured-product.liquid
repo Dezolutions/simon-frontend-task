@@ -1,0 +1,63 @@
+<div class="swiper-slide text-center border-4 rounded border-light-beige bg-featured">
+  <variant-swatch class="p-[19px] flex flex-col justify-between h-full">
+    <a href="{{ product.url }}">
+      {% if product.selected_or_first_available_variant.featured_image != null %}
+        <img src="{{ product.selected_or_first_available_variant.featured_image | img_url: '500x' }}"
+          sizes="(max-width: 600px) 400px,
+                  (max-width: 1024px) 600px,
+                  1024px"
+          alt="{{ product.featured_image.alt }}"
+          class="featured-product-img rounded aspect-square object-cover object-center"
+          />
+      {% else %}
+        <div class="aspect-square">{{ 'product-1' | placeholder_svg_tag }}</div>
+      {% endif %}
+    </a>
+
+    <h3 class="w-[176px] font-adorn-condensed-sans text-3xl m-auto my-[19px]">{{ product.title }}</h3>
+
+
+    {% if product.variants.size > 1 %}
+      <div class="relative">
+        <select
+          name="options"
+          class="featured-product-options outline-none mb-[24px] border-b-[1px] border-light-beige bg-transparent pb-[9px] appearance-none w-full font-futura font-medium text-lg"
+        >
+          {%- for variant in product.variants -%}
+            {% if variant.available %}
+              <option
+                {% if variant == product.selected_or_first_available_variant %}
+                  selected="selected"
+                {% endif %}
+                {% if variant.available == false %}
+                  disabled
+                {% endif %}
+                value="{{ variant.price | money }}"
+                data-variant-id="{{ variant.id }}"
+                data-product-variant-img="{{ variant.featured_image | img_url: '600x' }}"
+                data-variant-price="{{ variant.price | money }}"
+              >
+                {{ variant.title }}
+              </option>
+            {% endif %}
+          {%- endfor -%}
+        </select>
+
+        <svg class="absolute right-[8px] top-[9px]" width="19" height="10" viewBox="0 0 19 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1 1L9.5 8L18 1" stroke="#242323" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </div>
+    {% endif %}
+
+    <button
+      data-cart-add="{{ product.selected_or_first_available_variant.id }}"
+      type="submit"
+      name="add"
+      class="featured-product-atc bg-atc border-2 rounded border-cool flex justify-center items-center py-5 w-full h-[49px] leading-[17.95px] text-sm font-medium font-futura transition-all hover:translate-x-[-5px] hover:translate-y-[-5px] hover:shadow-custom"
+    >
+      <span class="featured-product-price leading-[17.95px]">{{ product.selected_or_first_available_variant.price | money }}</span>
+      <span class="leading-[17.95px]">&nbsp;|&nbsp;</span>
+      <span class="uppercase leading-[17.95px]">{{ 'products.product.add_to_cart' | t }}</span>
+    </button>
+  </variant-swatch>
+</div>
