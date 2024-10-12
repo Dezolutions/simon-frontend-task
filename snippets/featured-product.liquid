@@ -7,7 +7,7 @@
 
 <div class="featured-product" tabindex="0">
   {% if product.selected_or_first_available_variant.featured_image != null %}
-    <div class="featured-product__img-block">
+    <div class="featured-product__img-wrapper">
       <img src="{{ product.selected_or_first_available_variant.featured_image | img_url: '400x' }}"
         sizes="(max-width: 600px) 400px,
                 (max-width: 1024px) 600px,
