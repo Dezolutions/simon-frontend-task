@@ -1,4 +1,4 @@
-<div class="">
+<div class="featured-product">
   <variant-swatch class="">
     <a href="{{ product.url }}">
       {% if product.selected_or_first_available_variant.featured_image != null %}
@@ -56,7 +56,7 @@
       class=""
     >
       <span class="featured-product-price">{{ product.selected_or_first_available_variant.price | money }}</span>
-      <span class="leading-[17.95px]">&nbsp;|&nbsp;</span>
+      <span class="">&nbsp;|&nbsp;</span>
       <span class="">{{ 'products.product.add_to_cart' | t }}</span>
     </button>
   </variant-swatch>
