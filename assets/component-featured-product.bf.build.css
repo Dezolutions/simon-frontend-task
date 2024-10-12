@@ -23,9 +23,8 @@
 .featured-product__price, .featured-product__descr {
   font-size: 14px;
   line-height: 17.6px;
-  padding-bottom: 16px;
+  margin-bottom: 16px;
 }
 .featured-product__descr {
-  margin-bottom: 16px;
   border-bottom: 1px solid #C4C4C4;
 }
