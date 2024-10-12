@@ -5,7 +5,7 @@
 %}
 
 <div class="featured-product" tabindex="0">
-{% for item in product__price %}
+{% for item in product_price %}
   <p>{{ item }}</p>
 {% endfor %}
   {% if product.selected_or_first_available_variant.featured_image != null %}
