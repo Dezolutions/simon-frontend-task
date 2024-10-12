@@ -13,3 +13,6 @@
   background-color: #F8F8F8;
   border-radius: 0 0 1.2rem 1.2rem;
 }
+.featured-product__title {
+  margin: 0;
+}
