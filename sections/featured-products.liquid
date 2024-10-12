@@ -1,7 +1,7 @@
 {{ 'section-featured-products.bf.build.css' | asset_url | stylesheet_tag }}
 {{ 'component-featured-product.bf.build.css' | asset_url | stylesheet_tag }}
 <section
-  class="featured-products-{{ section.id }}"
+  class="featured-products-{{ section.id }} page-width"
 >
   {% if section.settings.title != blank %}
     <h2 class="featured-products__title">
