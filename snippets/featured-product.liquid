@@ -34,8 +34,12 @@
     </div>
     <div class="featured-product__divider"></div>
     <div class="featured-product__tags">
+      {% assign tagCount = 0 %}
       {% for tag in product.tags %}
         
+        {% if forloop.index > 2 %}
+
+        {% endif %}
         <span class="featured-product__tag">{{ tag }}</span>
       {% endfor %}
     </div>
