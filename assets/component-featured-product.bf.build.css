@@ -100,5 +100,5 @@
   line-height: 15.08px;
 }
 .featured-product__second-layout .featured-product__divider, .featured-product__second-layout .featured-product__tags {
-  display: none;
+  display: none !important;
 }
