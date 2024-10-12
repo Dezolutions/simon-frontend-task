@@ -19,6 +19,7 @@
 .featured-product__img {
   width: 100%;
   border-radius: 1.2rem 1.2rem 0 0;
+  object-position: center;
   background-color: #DEDEDE;
 }
 .featured-product__info {
