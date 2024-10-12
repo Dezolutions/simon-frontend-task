@@ -113,4 +113,7 @@
     flex-direction: column;
     height: auto;
   }
+  .featured-product__second-layout .featured-product__divider, .featured-product__second-layout .featured-product__tags {
+    display: block !important;
+  }
 }
