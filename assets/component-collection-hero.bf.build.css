@@ -13,7 +13,6 @@
     padding: 4rem 0 4rem;
     overflow: hidden;
   }
-
   .collection-hero--with-image .collection-hero__inner {
     padding-bottom: 0;
   }
@@ -26,7 +25,6 @@
   .collection-hero {
     padding: 0;
   }
-
   .collection-hero__inner {
     align-items: center;
     flex-direction: row;
@@ -50,11 +48,9 @@
     margin-top: 2rem;
     margin-bottom: 2rem;
   }
-
   .collection-hero__description {
     max-width: 66.67%;
   }
-
   .collection-hero--with-image .collection-hero__description {
     max-width: 100%;
   }
@@ -82,7 +78,6 @@
     padding: 4rem 2rem 4rem 0;
     flex-basis: 50%;
   }
-
   .collection-hero__image-container {
     align-self: stretch;
     flex: 1 0 50%;

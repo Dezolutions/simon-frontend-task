@@ -14,17 +14,14 @@
   .footer .grid {
     display: block;
   }
-
   .footer-block.grid__item {
     padding: 0;
     margin: 4rem 0;
     width: 100%;
   }
-
   .footer-block.grid__item:first-child {
     margin-top: 0;
   }
-
   .footer__content-top {
     padding-bottom: 3rem;
     padding-left: calc(4rem / var(--global-font-body-scale));
@@ -59,7 +56,6 @@
     padding-right: 0;
     row-gap: 1.5rem;
   }
-
   .footer__content-bottom-wrapper {
     flex-wrap: wrap;
     row-gap: 1.5rem;
@@ -174,27 +170,22 @@
     text-align: left;
     margin-right: auto;
   }
-
   .footer-block__newsletter:not(:only-child) .footer__newsletter {
     justify-content: flex-start;
     margin: 0;
   }
-
   .footer-block__newsletter:not(:only-child) .newsletter-form__message--success {
     left: auto;
   }
-
   .footer__follow-on-shop {
     margin-bottom: 0.4rem;
   }
-
   /* Follow on shop is the first button but it has siblings*/
   .footer__follow-on-shop:first-child:not(:last-child) {
     justify-content: flex-start;
     margin-right: auto;
     text-align: left;
   }
-
   /*
     All three components are present, email, Follow on Shop, and social icons.
     Moves the FoS button next to the social icons so they appear grouped together
@@ -216,14 +207,12 @@
     align-items: center;
     gap: 3rem;
   }
-
   .footer__list-social.list-social,
 .footer__follow-on-shop,
 .footer-block__newsletter {
     display: flex;
     justify-content: center;
   }
-
   .footer-block__newsletter {
     flex-direction: column;
   }
@@ -256,7 +245,6 @@
     padding: 0.4rem 0;
     justify-content: flex-start;
   }
-
   .footer__localization h2 {
     margin: 1rem 0 0;
   }
@@ -303,16 +291,13 @@
   .footer-block__details-content {
     margin-bottom: 0;
   }
-
   .footer-block__details-content > p,
 .footer-block__details-content > li {
     padding: 0;
   }
-
   .footer-block:only-child li {
     display: inline;
   }
-
   .footer-block__details-content > li:not(:last-child) {
     margin-right: 1.5rem;
   }
@@ -334,7 +319,6 @@
     text-decoration: underline;
     text-underline-offset: 0.3rem;
   }
-
   .footer-block__details-content .list-menu__item--active:hover {
     text-decoration-thickness: 0.2rem;
   }
@@ -350,7 +334,6 @@
     display: inline-block;
     font-size: 1.4rem;
   }
-
   .footer-block__details-content > :first-child .list-menu__item--link {
     padding-top: 0;
   }
@@ -454,7 +437,6 @@
     .footer__content-top .grid {
       margin-left: -3rem;
     }
-
     .footer__content-top .grid__item {
       padding-left: 3rem;
     }

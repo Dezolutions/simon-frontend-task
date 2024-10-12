@@ -1,6 +1,10 @@
 .customer {
   padding-top: 30px;
   padding-bottom: 30px;
+  /* Customer Table */
+  /* END Customer Table */
+  /* Pagination */
+  /* END Pagination */
 }
 .customer:not(.account):not(.order) {
   margin: 0 auto;
@@ -49,8 +53,6 @@
     font-size: calc(var(--global-font-heading-scale) * 2.2rem);
   }
 }
-
-/* Customer Table */
 .customer table {
   table-layout: auto;
   border-collapse: collapse;
@@ -158,61 +160,6 @@
     border-top: 0.1rem solid transparent;
   }
 }
-
-/* works around colspan phantom border issues */
-.customer thead::after,
-.customer tfoot::before {
-  content: " ";
-  height: 0.1rem;
-  width: 100%;
-  display: block;
-  position: absolute;
-  left: 0;
-  background: rgba(var(--color-foreground), 0.08);
-}
-
-@media screen and (forced-colors: active) {
-  .customer thead::after,
-.customer tfoot::before {
-    background: CanvasText;
-  }
-}
-/* mobile table overrides */
-@media screen and (max-width: 749px) {
-  .customer thead,
-.customer th,
-.customer tfoot td:first-of-type {
-    display: none;
-  }
-
-  .customer td {
-    display: flex;
-    text-align: right;
-  }
-
-  .customer td::before {
-    color: rgba(var(--color-foreground), 0.75);
-    content: attr(data-label);
-    font-size: 1.4rem;
-    padding-right: 2rem;
-    text-transform: uppercase;
-    flex-grow: 1;
-    text-align: left;
-  }
-
-  .customer td:first-of-type {
-    display: flex;
-    align-items: center;
-  }
-
-  .customer tr {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    width: 100%;
-  }
-}
-/* Pagination */
 .customer .pagination {
   margin-top: 5rem;
   margin-bottom: 7rem;
@@ -269,6 +216,55 @@
   }
 }
 
+/* works around colspan phantom border issues */
+.customer thead::after,
+.customer tfoot::before {
+  content: " ";
+  height: 0.1rem;
+  width: 100%;
+  display: block;
+  position: absolute;
+  left: 0;
+  background: rgba(var(--color-foreground), 0.08);
+}
+
+@media screen and (forced-colors: active) {
+  .customer thead::after,
+.customer tfoot::before {
+    background: CanvasText;
+  }
+}
+/* mobile table overrides */
+@media screen and (max-width: 749px) {
+  .customer thead,
+.customer th,
+.customer tfoot td:first-of-type {
+    display: none;
+  }
+  .customer td {
+    display: flex;
+    text-align: right;
+  }
+  .customer td::before {
+    color: rgba(var(--color-foreground), 0.75);
+    content: attr(data-label);
+    font-size: 1.4rem;
+    padding-right: 2rem;
+    text-transform: uppercase;
+    flex-grow: 1;
+    text-align: left;
+  }
+  .customer td:first-of-type {
+    display: flex;
+    align-items: center;
+  }
+  .customer tr {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+  }
+}
 /* Login */
 .login a {
   display: block;
@@ -365,7 +361,6 @@
   .order > div:nth-of-type(2) > div:last-of-type {
     display: flex;
   }
-
   .order > div:nth-of-type(2) > div:last-of-type div {
     padding-right: 3.2rem;
   }
@@ -555,14 +550,14 @@
 }
 .addresses li > button + button,
 .addresses form button + button {
-  margin-top: 0rem;
-}
-.addresses form button:first-of-type {
-  margin-right: 1rem;
+  margin-top: 0;
 }
 .addresses form {
   display: flex;
   flex-flow: row wrap;
+}
+.addresses form button:first-of-type {
+  margin-right: 1rem;
 }
 .addresses form > div {
   width: 100%;

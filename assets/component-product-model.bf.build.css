@@ -24,7 +24,6 @@
   slider-component .product__xr-button {
     display: none;
   }
-
   .active .product__xr-button:not([data-shopify-xr-hidden]) {
     display: block;
   }
@@ -33,7 +32,6 @@
   slider-component + .button.product__xr-button {
     display: none;
   }
-
   .product__xr-button[data-shopify-xr-hidden] {
     display: none;
   }
