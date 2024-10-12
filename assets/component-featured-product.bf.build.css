@@ -9,7 +9,7 @@
   background-color: #FDDDDD;
 }
 .featured-product__second-layout {
-  width: 512px;
+  max-width: 512px;
   height: 197px;
   flex-direction: row;
 }
@@ -102,4 +102,11 @@
 }
 .featured-product__second-layout .featured-product__divider, .featured-product__second-layout .featured-product__tags {
   display: none !important;
+}
+
+@media screen and (max-width: 768px) {
+  .featured-product,
+.featured-product__second-layout {
+    flex-direction: column;
+  }
 }
