@@ -30,7 +30,7 @@
         {% endif %}
         <span class="price__item">{{ product_price[0] }}</span>
       </p>
-      <p class="featured-product__descr">{{ product.description | truncate: 60, '...' }}</p>
+      <div class="featured-product__descr">{{ product.description | truncate: 60, '...' }}</div>
     </div>
     <div class="featured-product__divider"></div>
     <div class="featured-product__tags">
