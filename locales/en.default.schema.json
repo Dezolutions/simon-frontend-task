@@ -185,6 +185,9 @@
       "settings": {
         "header": {
           "content": "Section settings"
+        },
+        "title": {
+          "label": ""
         }
       }
     },
