@@ -1,7 +1,7 @@
 
 {% liquid
 
-  assign product_price = product.price | money_without_trailing_zeros | split: ' '
+  assign product_price = product.price | money_without_trailing_zeros | split: ''
 %}
 <div class="featured-product">
   {% if product.selected_or_first_available_variant.featured_image != null %}
