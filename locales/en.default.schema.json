@@ -196,10 +196,10 @@
           "label": "Number of displayed products"
         },
         "products_per_row_desktop": {
-          "label": "Porducts per row on desktop"
+          "label": "Products per row on desktop"
         },
         "products_per_row_mobile": {
-          "label": "Porducts per row on mobile"
+          "label": "Products per row on mobile"
         },
         "section_padding": {
           "content": "Section padding"
