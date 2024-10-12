@@ -8,6 +8,8 @@
   background-color: #FDDDDD;
 }
 .featured-product__second-layout {
+  width: 512px;
+  height: 197px;
   flex-direction: row;
 }
 .featured-product:hover .featured-product__quick-add-btn {
