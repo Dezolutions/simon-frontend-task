@@ -32,14 +32,14 @@
       </p>
       <p class="featured-product__descr">{{ product.description | truncate: 100, '...' }}</p>
     </div>
-
+    {% unless products_per_row_desktop == '2' %}
       <div class="featured-product__divider"></div>
       <div class="featured-product__tags">
       {% for tag in product.tags %}
         <span class="featured-product__tag">{{ tag }}</span>
       {% endfor %}
     </div>
-
+    {% endunless %}
 
     <product-form>
       {%- form 'product',
