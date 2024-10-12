@@ -25,3 +25,6 @@
   line-height: 17.6px;
   padding-bottom: 16px;
 }
+.featured-product__descr {
+  border-bottom: 1px solid #C4C4C4;
+}
