@@ -195,7 +195,12 @@
         "number_of_displayed_products": {
           "label": "Number of displayed products"
         },
-        
+        "products_per_row_desktop": {
+          "label": "Porducts per row on desktop"
+        },
+        "products_per_row_mobile": {
+          "label": "Porducts per row on desktop"
+        }
       }
     },
     "all": {
