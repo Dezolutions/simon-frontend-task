@@ -4,6 +4,7 @@
   assign product_price = product.price | money_without_trailing_zeros | split: ''
 %}
 {% for item in product__price %}
+  <p></p>
 {% endfor %}
 <div class="featured-product" tabindex="0">
   {% if product.selected_or_first_available_variant.featured_image != null %}
