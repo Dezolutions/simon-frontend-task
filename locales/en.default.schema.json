@@ -207,8 +207,8 @@
         "padding_top": {
           "label": "Padding top"
         },
-        "padding_top": {
-          "label": "Padding top"
+        "padding_bottom": {
+          "label": "Padding bottom"
         }
       }
     },
