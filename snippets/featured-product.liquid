@@ -19,7 +19,7 @@
       {% if product.price < product.compare_at_price %}
         <span class="price__compare-item">{{ product.compare_at_price }}</span>
       {% endif %}
-      <span class="price__item">{{ product.price }}</span>
+      <span class="price__item">{{ product.price | mon }}</span>
     </p>
     <p>{{ product.description }}</p>
     {% comment %} {% if product.variants.size > 1 %}
