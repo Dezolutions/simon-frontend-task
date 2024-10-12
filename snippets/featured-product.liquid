@@ -22,7 +22,7 @@
       <span class="price__item">{{ product.price | money_without_trailing_zeros }}</span>
     </p>
     <p class="featured-product__descr">{{ product.description }}</p>
-    
+    <div class="featured-product__divider"></div>
     {% comment %} {% if product.variants.size > 1 %}
       <div class="relative">
         <select
@@ -77,7 +77,7 @@
           id="{{ product_form_id }}-submit"
           type="submit"
           name="add"
-          class="quick-add__submit button button--full-width button--secondary{% if horizontal_quick_add %} card--horizontal__quick-add{% endif %}"
+          class="featured-product__quick-add-btn"
           aria-haspopup="dialog"
           aria-labelledby="{{ product_form_id }}-submit title-{{ section_id }}-{{ product.id }}"
           aria-live="polite"
