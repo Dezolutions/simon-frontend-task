@@ -31,3 +31,6 @@
   background-color: #C4C4C4;
   margin-bottom: 16px;
 }
+.featured-product__quick-add-btn {
+  border-radius: 12px;
+}
