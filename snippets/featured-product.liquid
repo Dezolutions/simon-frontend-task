@@ -15,7 +15,7 @@
 
 
   <div class="featured-product__info">
-    <h3 class="">{{ product.title }}</h3>
+    <h3 class="featured-product__title">{{ product.title }}</h3>
     {% render 'price' product: product %}
     <p>{{ product.description }}</p>
     {% comment %} {% if product.variants.size > 1 %}
