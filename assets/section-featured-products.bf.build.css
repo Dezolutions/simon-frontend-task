@@ -1,5 +1,6 @@
+@charset "UTF-8";
 .featured-products__block {
-  display: grid;
+  display: ад;
   gap: 5.1rem;
 }
 .featured-products__desktop-cols-2 {
