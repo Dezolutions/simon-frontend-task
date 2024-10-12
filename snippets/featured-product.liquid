@@ -14,14 +14,14 @@
       {% endif %}
     </a>
 
-    <h3 class="w-[176px] font-adorn-condensed-sans text-3xl m-auto my-[19px]">{{ product.title }}</h3>
+    <h3 class="">{{ product.title }}</h3>
 
 
     {% if product.variants.size > 1 %}
       <div class="relative">
         <select
           name="options"
-          class="featured-product-options outline-none mb-[24px] border-b-[1px] border-light-beige bg-transparent pb-[9px] appearance-none w-full font-futura font-medium text-lg"
+          class="featured-product-options"
         >
           {%- for variant in product.variants -%}
             {% if variant.available %}
