@@ -40,7 +40,7 @@
   transition: all 0.3s ease;
 }
 .featured-product__second-layout .featured-product__info {
-  border-radius: 0 0 12px 12px;
+  border-radius: 0 12px 0 12px;
 }
 .featured-product__title {
   margin: 0;
