@@ -22,14 +22,16 @@
 
 
   <div class="featured-product__info">
-    <h3 class="featured-product__title">{{ product.title }}</h3>
-    <p class="featured-product__price">
-      {% if product.price < product.compare_at_price %}
-        <span class="price__compare-item">{{ product_compare_at_price[0] }}</span>
-      {% endif %}
-      <span class="price__item">{{ product_price[0] }}</span>
-    </p>
-    <p class="featured-product__descr">{{ product.description | truncate: 100, '...' }}</p>
+    <div class="featured-product">
+      <h3 class="featured-product__title">{{ product.title }}</h3>
+      <p class="featured-product__price">
+        {% if product.price < product.compare_at_price %}
+          <span class="price__compare-item">{{ product_compare_at_price[0] }}</span>
+        {% endif %}
+        <span class="price__item">{{ product_price[0] }}</span>
+      </p>
+      <p class="featured-product__descr">{{ product.description | truncate: 100, '...' }}</p>
+    </div>
     {% unless products_per_row_desktop == '2' %}
       <div class="featured-product__divider"></div>
       <div class="featured-product__tags">
