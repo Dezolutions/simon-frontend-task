@@ -34,9 +34,9 @@
     </div>
     <div class="featured-product__divider"></div>
     <div class="featured-product__tags">
+
       {% assign tagCount = 0 %}
       {% for tag in product.tags %}
-
         {% if forloop.index > 2 %}
           {% assign tagCount = tagCount | plus: 1 %}
         {% else %}
