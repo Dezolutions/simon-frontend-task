@@ -35,6 +35,7 @@
 .featured-product__info {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   padding: 2.4rem;
   background-color: #F8F8F8;
   border-radius: 0 0 12px 12px;
@@ -97,4 +98,7 @@
   border: 1px solid #3C3C43;
   font-size: 12px;
   line-height: 15.08px;
+}
+.featured-product__second-layout .featured-product__divider, .featured-product__second-layout .featured-product__tags {
+  display: none;
 }
