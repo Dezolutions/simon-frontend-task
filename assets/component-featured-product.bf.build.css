@@ -17,3 +17,6 @@
   margin: 0;
   margin-bottom: 0.4rem;
 }
+.featured-product__price {
+  font-size: 1.4rem;
+}
