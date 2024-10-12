@@ -16,7 +16,7 @@
 
   <div class="featured-product__info">
     <h3 class="">{{ product.title }}</h3>
-    {% if product.variants.size > 1 %}
+    {% comment %} {% if product.variants.size > 1 %}
       <div class="relative">
         <select
           name="options"
@@ -46,7 +46,7 @@
           <path d="M1 1L9.5 8L18 1" stroke="#242323" stroke-width="2" stroke-linecap="round"/>
         </svg>
       </div>
-    {% endif %}
+    {% endif %} {% endcomment %}
 
     <button
       data-cart-add="{{ product.selected_or_first_available_variant.id }}"
