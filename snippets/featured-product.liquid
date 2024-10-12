@@ -29,6 +29,7 @@
       {% endif %}
       <span class="price__item">{{ product_price[0] }}</span>
     </p>
+    {}
     <p class="featured-product__descr">{{ product.description | truncate: 100, '...' }}</p>
     <div class="featured-product__divider"></div>
     {% comment %} {% if product.variants.size > 1 %}
