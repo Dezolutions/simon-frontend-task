@@ -1,5 +1,7 @@
 .featured-product {
   width: 342px;
+  display: flex;
+  flex-direction: column;
 }
 .featured-product__img {
   width: 100%;
