@@ -29,7 +29,7 @@
       {% endif %}
       <span class="price__item">{{ product_price[0] }}</span>
     </p>
-    {% unless products_per_row_desktop == 2 %}
+    {% unless products_per_row_desktop == '2' %}
       <p class="featured-product__descr">{{ product.description | truncate: 100, '...' }}</p>
       <div class="featured-product__divider"></div>
     {% endunless %}
