@@ -27,6 +27,7 @@
 }
 .featured-product__divider {
   display: block !important;
+  visibility: inherit !important;
   width: 100%;
   height: 1px;
   background-color: #C4C4C4;
