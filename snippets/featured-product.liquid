@@ -30,13 +30,13 @@
         {% endif %}
         <span class="price__item">{{ product_price[0] }}</span>
       </p>
-      <p class="featured-product__descr">{{ product.description | truncate: 100, '...' }}</p>
+      <p class="featured-product__descr">{{ product.description | truncate: 50, '...' }}</p>
     </div>
     <div class="featured-product__divider"></div>
     <div class="featured-product__tags">
-    {% for tag in product.tags %}
-      <span class="featured-product__tag">{{ tag }}</span>
-    {% endfor %}
+      {% for tag in product.tags %}
+        <span class="featured-product__tag">{{ tag }}</span>
+      {% endfor %}
     </div>
     <product-form>
       {%- form 'product',
