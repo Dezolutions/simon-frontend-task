@@ -33,13 +33,13 @@
   border-radius: 12px 0 0 12px;
 }
 .featured-product__info {
-  width: 100%;
   padding: 2.4rem;
   background-color: #F8F8F8;
   border-radius: 0 0 12px 12px;
   transition: all 0.3s ease;
 }
 .featured-product__second-layout .featured-product__info {
+  flex-grow: 1;
   border-radius: 0 12px 12px 0;
 }
 .featured-product__title {
