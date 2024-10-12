@@ -105,6 +105,10 @@
 }
 
 @media screen and (max-width: 768px) {
+  .featured-product {
+    flex-direction: column;
+    height: auto;
+  }
   .featured-product__second-layout {
     flex-direction: column;
     height: auto;
