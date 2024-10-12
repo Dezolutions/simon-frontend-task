@@ -22,6 +22,7 @@
       <span class="price__item">{{ product.price | money_without_trailing_zeros }}</span>
     </p>
     <p class="featured-product__descr">{{ product.description }}</p>
+    
     {% comment %} {% if product.variants.size > 1 %}
       <div class="relative">
         <select
