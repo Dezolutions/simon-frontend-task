@@ -1,5 +1,6 @@
 .featured-product {
-  width: 342px;
+  max-width: 342px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   transition: all 0.3s ease;
