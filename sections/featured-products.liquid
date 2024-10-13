@@ -11,7 +11,7 @@
   {% endif %}
 
   <div class="featured-products__block featured-products__desktop-cols-{{ section.settings.products_per_row_desktop }}">
-     {% paginate section.settings.collection.products by 6 %} 
+     {% paginate section.settings.collection.products by 6 %}
       {% for product in  section.settings.collection.products limit: section.settings.number_of_displayed_products %}
         {% render 'featured-product',
           product: product,
