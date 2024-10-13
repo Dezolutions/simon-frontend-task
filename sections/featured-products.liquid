@@ -12,7 +12,7 @@
   {% endif %}
   {% assign collection = collections[section.settings.collection.handle] %}
   {% if collection %}
-    {% paginate collection by section.settings.number_of_displayed_products %}
+    {% paginate collection.products by section.settings.number_of_displayed_products %}
       <lazy-loading-grid
         data-grid-class="featured-products__block"
         data-grid-item-class="featured-product"
