@@ -18,7 +18,7 @@
         data-grid-item-class="featured-product"
       >
         <div class="featured-products__block featured-products__desktop-cols-{{ section.settings.products_per_row_desktop }}">
-          {% for product in  paginate.items %}
+          {% for product in  section.settings.collection.products %}
             {% render 'featured-product',
               product: product,
               products_per_row_desktop: section.settings.products_per_row_desktop
