@@ -24,7 +24,7 @@
   }
 }
 @media screen and (max-width: 768px) {
-  .featured-products__desktop-cols-3 {
+  .featured-products__desktop-cols-3, .featured-products__desktop-cols-2 {
     grid-template-columns: repeat(1, minmax(0, 342px));
   }
 }
