@@ -10,34 +10,35 @@
     </h2>
   {% endif %}
 
-  
-  <lazy-loading-grid
-    data-grid-class="featured-products__block"
-  >
-    <div class="featured-products__block featured-products__desktop-cols-{{ section.settings.products_per_row_desktop }}">
-      {% for product in  section.settings.collection.products limit: section.settings.number_of_displayed_products %}
-        {% render 'featured-product',
-          product: product,
-          products_per_row_desktop: section.settings.products_per_row_desktop
-        %}
-      {% endfor %}
-    </div>
-    <button id="load-more">
-      <span class="load-more__text">{{ 'products.product.load_more' | t }}</span>
-
-      <div class="loading-overlay__spinner hidden">
-        <svg
-          aria-hidden="true"
-          focusable="false"
-          class="spinner"
-          viewBox="0 0 66 66"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
-        </svg>
+  {% paginate section.settings.collection.products by section.settings.number_of_displayed_products %}
+    <lazy-loading-grid
+      data-grid-class="featured-products__block"
+    >
+      <div class="featured-products__block featured-products__desktop-cols-{{ section.settings.products_per_row_desktop }}">
+        {% for product in  section.settings.collection.products %}
+          {% render 'featured-product',
+            product: product,
+            products_per_row_desktop: section.settings.products_per_row_desktop
+          %}
+        {% endfor %}
       </div>
-    </button>
-  </lazy-loading-grid>
+      <button id="load-more">
+        <span class="load-more__text">{{ 'products.product.load_more' | t }}</span>
+
+        <div class="loading-overlay__spinner hidden">
+          <svg
+            aria-hidden="true"
+            focusable="false"
+            class="spinner"
+            viewBox="0 0 66 66"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
+          </svg>
+        </div>
+      </button>
+    </lazy-loading-grid>
+  {% endpaginate %}
 </section>
 
 {% style %}
