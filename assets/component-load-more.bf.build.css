@@ -4,6 +4,7 @@
 .load-more__btn {
   border-radius: 12px;
   display: flex;
+  width: 250px;
   justify-content: center;
   align-items: center;
   cursor: pointer;
