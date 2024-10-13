@@ -23,21 +23,20 @@
         {% endfor %}
       </div>
       
-      <button id="load-more">
-        <span class="load-more__text">{{ 'products.product.load_more' | t }}</span>
-
-        <div class="loading-overlay__spinner hidden">
-          <svg
-            aria-hidden="true"
-            focusable="false"
-            class="spinner"
-            viewBox="0 0 66 66"
-            xmlns="http://www.w3.org/2000/svg"
+      {% unless section.settings.products_per_page > paginate.items %}
+        <div class="load-more-block">
+          <p class="load-more-text">{{ 'sections.collection_template.showing' | t }}<span class="load-more-current-count">{{ section.settings.products_per_page }}</span> {{ 'sections.collection_template.of' | t }} {{ paginate.items }}</p>
+          <button
+            data-page-items="{{ paginate.items }}"
+            data-page="{{ paginate.current_page }}"
+            id="load-more"
+            class="button load-more-btn"
           >
-            <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
-          </svg>
+            <span class="load-more-text">{{ 'sections.collection_template.load_more' | t }}</span>
+            <span class="load-more-loading">{% render 'loading-spinner' %}</span>
+          </button>
         </div>
-      </button>
+      {% endunless %}
     </lazy-loading-grid>
   {% endpaginate %}
 </section>
