@@ -1181,7 +1181,7 @@ if (!customElements.get('lazy-loading-grid')) {
         const url = new URL(window.location);
         url.searchParams.set('page', this.currentPage + 1);
         this.buttonText.classList.add('hidden');
-        this.button.classList.add('loading');
+        this.buttonLoader.classList.remove('hidden');
         fetch(url)
           .then(response => response.text())
           .then(data => {
