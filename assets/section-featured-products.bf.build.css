@@ -1,5 +1,5 @@
 .featured-products__block {
-  display: flex;
+  display: grid;
   justify-content: center;
   flex-wrap: wrap;
   gap: 5.1rem;
