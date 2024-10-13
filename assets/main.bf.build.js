@@ -36,7 +36,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \*************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _shopify_theme_sections__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @shopify/theme-sections */ \"./node_modules/.pnpm/@shopify+theme-sections@4.1.1/node_modules/@shopify/theme-sections/theme-sections.js\");\n\n(0,_shopify_theme_sections__WEBPACK_IMPORTED_MODULE_0__.register)(\"featured-products\", FeaturedProducts);\nconsole.log('custom js is loaded test-js');\n(0,_shopify_theme_sections__WEBPACK_IMPORTED_MODULE_0__.load)(\"*\");\n\n\n//# sourceURL=webpack://Shopify-theme/./src/js/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _shopify_theme_sections__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @shopify/theme-sections */ \"./node_modules/.pnpm/@shopify+theme-sections@4.1.1/node_modules/@shopify/theme-sections/theme-sections.js\");\nObject(function webpackMissingModule() { var e = new Error(\"Cannot find module '@/shopify/sections/featured-products'\"); e.code = 'MODULE_NOT_FOUND'; throw e; }());\n\n\n(0,_shopify_theme_sections__WEBPACK_IMPORTED_MODULE_0__.register)(\"featured-products\", Object(function webpackMissingModule() { var e = new Error(\"Cannot find module '@/shopify/sections/featured-products'\"); e.code = 'MODULE_NOT_FOUND'; throw e; }()));\nconsole.log('custom js is loaded test-js');\n(0,_shopify_theme_sections__WEBPACK_IMPORTED_MODULE_0__.load)(\"*\");\n\n\n//# sourceURL=webpack://Shopify-theme/./src/js/index.js?");
 
 /***/ }),
 
