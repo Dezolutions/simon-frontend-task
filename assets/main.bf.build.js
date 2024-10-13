@@ -38,7 +38,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _shopify_theme_sections__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @shopify/theme-sections */ \"./node_modules/.pnpm/@shopify+theme-sections@4.1.1/node_modules/@shopify/theme-sections/theme-sections.js\");\n/* harmony import */ var _js_sections_lazy_loading_grid__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @/js/sections/lazy-loading-grid */ \"./src/js/sections/lazy-loading-grid.js\");\n/* harmony import */ var _js_sections_lazy_loading_grid__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_js_sections_lazy_loading_grid__WEBPACK_IMPORTED_MODULE_1__);\n\n\n\n(0,_shopify_theme_sections__WEBPACK_IMPORTED_MODULE_0__.register)(\"lazy-loading-grid\", (_js_sections_lazy_loading_grid__WEBPACK_IMPORTED_MODULE_1___default()));\nconsole.log('custom js is loaded test-js');\n(0,_shopify_theme_sections__WEBPACK_IMPORTED_MODULE_0__.load)(\"*\");\n\n\n//# sourceURL=webpack://Shopify-theme/./src/js/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _shopify_theme_sections__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @shopify/theme-sections */ \"./node_modules/.pnpm/@shopify+theme-sections@4.1.1/node_modules/@shopify/theme-sections/theme-sections.js\");\n/* harmony import */ var _js_sections_lazy_loading_grid__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @/js/sections/lazy-loading-grid */ \"./src/js/sections/lazy-loading-grid.js\");\n/* harmony import */ var _js_sections_lazy_loading_grid__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_js_sections_lazy_loading_grid__WEBPACK_IMPORTED_MODULE_1__);\n\n\n\n(0,_shopify_theme_sections__WEBPACK_IMPORTED_MODULE_0__.register)(\"lazy-loading-grid\", (_js_sections_lazy_loading_grid__WEBPACK_IMPORTED_MODULE_1___default()));\n// console.log('custom js is loaded test-js');\n(0,_shopify_theme_sections__WEBPACK_IMPORTED_MODULE_0__.load)(\"*\");\n\n\n//# sourceURL=webpack://Shopify-theme/./src/js/index.js?");
 
 /***/ }),
 
@@ -48,7 +48,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sho
   \**********************************************/
 /***/ (() => {
 
-eval("\nconst LazyLoadingGrid = {\n  \n}\n\n//# sourceURL=webpack://Shopify-theme/./src/js/sections/lazy-loading-grid.js?");
+eval("\nconst LazyLoadingGrid = {\n  onload() {\n    console.log('works')\n  }\n}\n\n//# sourceURL=webpack://Shopify-theme/./src/js/sections/lazy-loading-grid.js?");
 
 /***/ }),
 
