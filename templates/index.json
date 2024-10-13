@@ -28,7 +28,7 @@
           "type": "buttons",
           "settings": {
             "button_label_1": "Shop all",
-            "button_link_1": "shopify:\/\/collections\/all"
+            "button_link_1": "shopify://collections/all"
           }
         }
       },
@@ -42,9 +42,21 @@
         "image_height": "large",
         "desktop_content_position": "bottom-center"
       }
+    },
+    "featured_products_Jntejd": {
+      "type": "featured-products",
+      "settings": {
+        "title": "Section title",
+        "collection": "peanuts",
+        "number_of_displayed_products": 2,
+        "products_per_row_desktop": "2",
+        "padding_top": 50,
+        "padding_bottom": 50
+      }
     }
   },
   "order": [
-    "image_banner"
+    "image_banner",
+    "featured_products_Jntejd"
   ]
 }
