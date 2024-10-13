@@ -1192,6 +1192,7 @@ if (!customElements.get('lazy-loading-grid')) {
                 this.grid.appendChild(item);
               });
             }
+            console.log(newProducts)
             this.currentProductsCountEl.innerHTML = +this.currentProductsCount + newProducts.length;
             this.currentProductsCount = +this.currentProductsCount + newProducts.length;
             this.button.setAttribute('data-page', this.currentPage + 1)
