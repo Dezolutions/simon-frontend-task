@@ -18,6 +18,10 @@
           products_per_row_desktop: section.settings.products_per_row_desktop
         %}
       {% endfor %}
+
+      {%- if paginate.pages > 1 -%}
+        {%- render 'pagination', paginate: paginate -%}
+      {%- endif -%}
     {% endpaginate %}
   </div>
 </section>
