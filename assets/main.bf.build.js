@@ -25,7 +25,7 @@ eval("//import { register, load } from \"@shopify/theme-sections\";\nconsole.log
   \**********************************************/
 /***/ (() => {
 
-eval("throw new Error(\"Module parse failed: Unexpected token (32:56)\\nYou may need an appropriate loader to handle this file type, currently no loaders are configured to process this file. See https://webpack.js.org/concepts#loaders\\n|             const parser = new DOMParser();\\n|             const doc = parser.parseFromString(data, 'text/html');\\n>             const newProducts = doc.querySelectorAll(`${}.product-grid .grid__item`);\\n|             if (newProducts.length) {\\n|               newProducts.forEach(item => {\");\n\n//# sourceURL=webpack://Shopify-theme/./src/js/snippets/lazy-loading-grid.js?");
+eval("throw new Error(\"Module parse failed: Unexpected token (32:57)\\nYou may need an appropriate loader to handle this file type, currently no loaders are configured to process this file. See https://webpack.js.org/concepts#loaders\\n|             const parser = new DOMParser();\\n|             const doc = parser.parseFromString(data, 'text/html');\\n>             const newProducts = doc.querySelectorAll(`.${} .grid__item`);\\n|             if (newProducts.length) {\\n|               newProducts.forEach(item => {\");\n\n//# sourceURL=webpack://Shopify-theme/./src/js/snippets/lazy-loading-grid.js?");
 
 /***/ }),
 
