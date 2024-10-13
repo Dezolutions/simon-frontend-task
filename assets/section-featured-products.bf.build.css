@@ -1,9 +1,11 @@
 .featured-products__block {
   display: grid;
-  grid-template-columns: repeat(3, 342px);
   justify-content: center;
   flex-wrap: wrap;
   gap: 5.1rem;
+}
+.featured-products__desktop-cols-3 {
+  grid-template-columns: repeat(3, 342px);
 }
 .featured-products__title {
   text-align: center;
