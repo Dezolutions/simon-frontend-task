@@ -12,3 +12,9 @@
 .featured-products__title {
   text-align: center;
 }
+
+@media screen and (max-width: 1200px) {
+  .featured-products__desktop-cols-3 {
+    grid-template-columns: repeat(2, minmax(0, 342px));
+  }
+}
