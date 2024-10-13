@@ -18,7 +18,7 @@
         data-grid-item-class="featured-product"
       >
         {% for item in paginate.items %}
-          {{ item}}
+          {{ item }}
         {% endfor %}
         <div class="featured-products__block featured-products__desktop-cols-{{ section.settings.products_per_row_desktop }}">
           {% for product in  section.settings.collection.products %}
