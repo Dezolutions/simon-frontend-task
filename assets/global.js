@@ -1163,7 +1163,7 @@ if (!customElements.get('lazy-loading-grid')) {
         
         this.button = this.querySelector('#load-more');
         this.buttonText = this.button.querySelector('.load-more__text');
-        this.buttonLoader = this.button.querySelector('.load-more__text');
+        this.buttonLoader = this.button.querySelector('.loading-overlay__spinner');
         this.grid = this.querySelector(`.${this.dataset.gridClass}`);
         this.button?.addEventListener('click', this.loadMore.bind(this));
         this.productsCount = +this.button.dataset.pageItems;
