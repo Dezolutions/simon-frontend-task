@@ -1,7 +1,7 @@
 .featured-products__block {
   display: grid;
   justify-content: center;
-  gap: 5.1rem;
+  gap: 51px;
 }
 .featured-products__desktop-cols-3 {
   grid-template-columns: repeat(3, minmax(0, 342px));
