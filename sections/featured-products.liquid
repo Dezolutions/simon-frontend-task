@@ -10,7 +10,7 @@
       {{ section.settings.title }}
     </h2>
   {% endif %}
-
+  
   {% paginate section.settings.collection.products by section.settings.number_of_displayed_products %}
     <lazy-loading-grid
       data-grid-class="featured-products__block"
