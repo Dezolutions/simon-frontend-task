@@ -1203,7 +1203,7 @@ if (!customElements.get('lazy-loading-grid')) {
               this.loadMoreBLock.classList.add('hidden');
             }
             this.buttonText.classList.remove('hidden');
-            this.button.classList.remove('loading');
+            this.buttonLoader.classList.add('hidden');
           })
           .catch(error => console.error('Error loading more products:', error));
       }
