@@ -25,7 +25,7 @@
       
       {% unless section.settings.number_of_displayed_products > paginate.items %}
         <div class="load-more-block">
-          <p class="load-more-text">{{ 'sections.collection_template.showing' | t }}<span class="load-more-current-count">{{ section.settings.products_per_page }}</span> {{ 'sections.collection_template.of' | t }} {{ paginate.items }}</p>
+          <p class="load-more-text">{{ 'sections.collection_template.showing' | t }}<span class="load-more-current-count">{{ section.settings.number_of_displayed_products }}</span> {{ 'sections.collection_template.of' | t }} {{ paginate.items }}</p>
           <button
             data-page-items="{{ paginate.items }}"
             data-page="{{ paginate.current_page }}"
