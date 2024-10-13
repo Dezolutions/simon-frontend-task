@@ -180,6 +180,35 @@
     }
   },
   "sections": {
+    "featured_products": {
+      "name": "Featured Products",
+      "settings": {
+        "section_settings": {
+          "content": "Section settings"
+        },
+        "title": {
+          "label": "Section title"
+        },
+        "collection": {
+          "label": "Collection"
+        },
+        "number_of_displayed_products": {
+          "label": "Maximum products to show"
+        },
+        "products_per_row_desktop": {
+          "label": "Products per row on desktop"
+        },
+        "section_padding": {
+          "content": "Section padding"
+        },
+        "padding_top": {
+          "label": "Padding top"
+        },
+        "padding_bottom": {
+          "label": "Padding bottom"
+        }
+      }
+    },
     "all": {
       "animation": {
         "content": "Animations",

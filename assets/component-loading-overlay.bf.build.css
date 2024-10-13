@@ -18,6 +18,7 @@
 .loading-overlay__spinner {
   width: 1.8rem;
   display: inline-block;
+  margin-top: 4px;
 }
 
 .spinner {

@@ -1,0 +1,147 @@
+{{ 'section-featured-products.bf.build.css' | asset_url | stylesheet_tag }}
+{{ 'component-featured-product.bf.build.css' | asset_url | stylesheet_tag }}
+{{ 'component-load-more.bf.build.css' | asset_url | stylesheet_tag }}
+
+<section
+  class="featured-products-{{ section.id }} page-width"
+>
+  {% if section.settings.title != blank %}
+    <h2 class="featured-products__title">
+      {{ section.settings.title }}
+    </h2>
+  {% endif %}
+  {% assign collection = collections[section.settings.collection.handle] %}
+  {% if collection %}
+    {% paginate collection.products by section.settings.number_of_displayed_products %}
+      <lazy-loading-grid
+        data-grid-class="featured-products__block"
+        data-grid-item-class="featured-product"
+      >
+        <div class="featured-products__block featured-products__desktop-cols-{{ section.settings.products_per_row_desktop }}">
+          {% for product in collection.products %}
+            {% render 'featured-product',
+              product: product,
+              products_per_row_desktop: section.settings.products_per_row_desktop
+            %}
+          {% endfor %}
+        </div>
+
+        {% unless paginate.current_page == paginate.pages %}
+          <div class="load-more">
+            <p class="load-more__text">{{ 'products.product.showing' | t }}<span class="load-more__current-count">{{ section.settings.number_of_displayed_products }}</span> {{ 'products.product.of' | t }} {{ paginate.items }} {{ 'products.product.products_text' | t }}</p>
+            <button
+              data-page-items="{{ paginate.items }}"
+              data-page="{{ paginate.current_page }}"
+              id="load-more"
+              class="load-more__btn"
+            >
+              <span class="load-more__btn-text">{{ 'products.product.load_more' | t }}</span>
+              <div class="loading-overlay__spinner hidden">
+                <svg
+                  aria-hidden="true"
+                  focusable="false"
+                  class="spinner"
+                  viewBox="0 0 66 66"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
+                </svg>
+              </div>
+            </button>
+          </div>
+        {% endunless %}
+      </lazy-loading-grid>
+    {% endpaginate %}
+  {% endif %}
+</section>
+
+{% style %}
+  .featured-products-{{ section.id }} {
+    padding-top: {{ section.settings.padding_top | divided_by: 2}}px;
+    padding-bottom: {{ section.settings.padding_bottom | divided_by: 2 }}px;
+  }
+
+  @media screen and (min-width:768px) {
+    .featured-products-{{ section.id }} {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{% endstyle %}
+
+<script defer src="{{ 'product-form.js' | asset_url }}"></script>
+{% schema %}
+  {
+    "name": "t:sections.featured_products.name",
+    "settings": [
+      {
+        "type": "header",
+        "content": "t:sections.featured_products.settings.section_settings.content"
+      },
+      {
+        "type": "text",
+        "id": "title",
+        "label": "t:sections.featured_products.settings.title.label"
+      },
+      {
+        "type": "collection",
+        "id": "collection",
+        "label": "t:sections.featured_products.settings.collection.label"
+      },
+      {
+        "type": "range",
+        "id": "number_of_displayed_products",
+        "min": 1,
+        "max": 25,
+        "step": 1,
+        "label": "t:sections.featured_products.settings.number_of_displayed_products.label",
+        "default": 12
+      },
+      {
+        "type": "select",
+        "id": "products_per_row_desktop",
+        "label": "t:sections.featured_products.settings.products_per_row_desktop.label",
+        "options": [
+          {
+            "value": "2",
+            "label": "2"
+          },
+          {
+            "value": "3",
+            "label": "3"
+          }
+        ],
+        "default": "3",
+      },
+      {
+        "type": "header",
+        "content": "t:sections.featured_products.settings.section_padding.content"
+      },
+      {
+        "type": "range",
+        "id": "padding_top",
+        "label": "t:sections.featured_products.settings.padding_top.label",
+        "default": 50,
+        "min": 0,
+        "max": 100,
+        "step": 2,
+        "unit": "px"
+      },
+      {
+        "type": "range",
+        "id": "padding_bottom",
+        "label": "t:sections.featured_products.settings.padding_bottom.label",
+        "default": 50,
+        "min": 0,
+        "max": 100,
+        "step": 2,
+        "unit": "px"
+      }
+    ],
+    "presets": [
+      {
+        "name": "t:sections.featured_products.name"
+      }
+    ]
+  }
+{% endschema %}

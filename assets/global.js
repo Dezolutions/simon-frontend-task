@@ -1153,3 +1153,60 @@ class ProductRecommendations extends HTMLElement {
 }
 
 customElements.define('product-recommendations', ProductRecommendations);
+
+if (!customElements.get('lazy-loading-grid')) {
+  customElements.define(
+    'lazy-loading-grid',
+    class LazyLoadingGrid extends HTMLElement {
+      constructor() {
+        super();
+        this.button = this.querySelector('#load-more');
+        this.buttonText = this.button.querySelector('.load-more__btn-text');
+        this.buttonLoader = this.button.querySelector('.loading-overlay__spinner');
+        this.grid = this.querySelector(`.${this.dataset.gridClass}`);
+        this.button?.addEventListener('click', this.loadMore.bind(this));
+        this.productsCount = +this.button.dataset.pageItems;
+        this.currentPage = +this.button.dataset.page;
+        this.currentProductsCount = +this.grid.querySelectorAll(`.${this.dataset.gridItemClass}`).length;
+        this.currentProductsCountEl = this.querySelector('.load-more__current-count');
+        this.loadMoreBLock = this.querySelector('.load-more');
+
+        if(this.currentProductsCountEl.innerText === '') {
+          this.currentProductsCountEl.innerText = this.currentProductsCount;
+        }
+      }
+
+      loadMore() {
+        const url = new URL(window.location);
+        url.searchParams.set('page', this.currentPage + 1);
+        this.buttonText.classList.add('hidden');
+        this.buttonLoader.classList.remove('hidden');
+        fetch(url)
+          .then(response => response.text())
+          .then(data => {
+            const parser = new DOMParser();
+            const doc = parser.parseFromString(data, 'text/html');
+            const newProducts = doc.querySelectorAll(`.${this.dataset.gridClass} .${this.dataset.gridItemClass}`);
+            if (newProducts.length) {
+              newProducts.forEach(item => {
+                this.grid.appendChild(item);
+              });
+            }
+
+            this.currentProductsCountEl.innerHTML = +this.currentProductsCount + newProducts.length;
+            this.currentProductsCount = +this.currentProductsCount + newProducts.length;
+            this.button.setAttribute('data-page', this.currentPage + 1)
+            this.currentPage = this.currentPage + 1;
+            if(this.currentProductsCount == this.productsCount){
+              // Hide the button if no more products are available
+              this.button.classList.add('hidden');
+              this.loadMoreBLock.classList.add('hidden');
+            }
+            this.buttonText.classList.remove('hidden');
+            this.buttonLoader.classList.add('hidden');
+          })
+          .catch(error => console.error('Error loading more products:', error));
+      }
+    }
+  );
+}
