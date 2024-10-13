@@ -10,7 +10,7 @@
       {{ section.settings.title }}
     </h2>
   {% endif %}
-  {% assign collection_products = section.settings.collection.products %}
+  {% assign collection = collections[section.settings.collection.handle] %}
   {% if section.settings.collection %}
     {% paginate section.settings.collection.products by section.settings.number_of_displayed_products %}
       <lazy-loading-grid
