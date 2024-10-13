@@ -7,7 +7,7 @@
   grid-template-columns: repeat(3, minmax(0, 342px));
 }
 .featured-products__desktop-cols-3 {
-  grid-template-columns: repeat(2, minmax(0, 598px));
+  grid-template-columns: repeat(2, minmax(0, 512px));
 }
 .featured-products__title {
   text-align: center;
