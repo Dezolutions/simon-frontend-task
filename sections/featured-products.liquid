@@ -12,7 +12,7 @@
   {% endif %}
 
   {% if section.settings.collection %}
-    {% paginate section.settings.collection.products by section.settings.number_of_displayed_products %}
+    {% paginate section.settings.collection.products by 2 %}
       <lazy-loading-grid
         data-grid-class="featured-products__block"
         data-grid-item-class="featured-product"
