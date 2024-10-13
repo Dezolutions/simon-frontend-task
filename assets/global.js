@@ -1170,7 +1170,7 @@ if (!customElements.get('lazy-loading-grid')) {
         this.currentPage = +this.button.dataset.page;
         this.currentProductsCount = +this.grid.querySelectorAll(`.${this.dataset.gridItemClass}`).length;
         this.currentProductsCountEl = this.querySelector('.load-more-current-count');
-        this.loadMoreBLock = this.querySelector('.load-more-block');
+        this.loadMoreBLock = this.querySelector('.load-more');
 
         if(this.currentProductsCountEl.innerText === '') {
           this.currentProductsCountEl.innerText = this.currentProductsCount;
