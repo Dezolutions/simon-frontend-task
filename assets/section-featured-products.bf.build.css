@@ -1,7 +1,6 @@
 .featured-products__block {
   display: grid;
   justify-content: center;
-  flex-wrap: wrap;
   gap: 5.1rem;
 }
 .featured-products__desktop-cols-3 {
