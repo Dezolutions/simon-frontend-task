@@ -48,8 +48,8 @@
       "settings": {
         "title": "Section title",
         "collection": "peanuts",
-        "number_of_displayed_products": 2,
-        "products_per_row_desktop": "2",
+        "number_of_displayed_products": 4,
+        "products_per_row_desktop": "3",
         "padding_top": 50,
         "padding_bottom": 50
       }
