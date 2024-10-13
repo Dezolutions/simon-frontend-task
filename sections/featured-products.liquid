@@ -27,7 +27,7 @@
       
       {% unless section.settings.number_of_displayed_products > paginate.items %}
         <div class="load-more">
-          <p class="load-more-text">{{ 'products.product.showing' | t }}<span class="load-more-current-count">{{ section.settings.number_of_displayed_products }}</span> {{ 'products.product.of' | t }} {{ paginate.items }} {{ 'products.product.products_text' | t }}</p>
+          <p class="load-more__text">{{ 'products.product.showing' | t }}<span class="load-more-current-count">{{ section.settings.number_of_displayed_products }}</span> {{ 'products.product.of' | t }} {{ paginate.items }} {{ 'products.product.products_text' | t }}</p>
           <button
             data-page-items="{{ paginate.items }}"
             data-page="{{ paginate.current_page }}"
