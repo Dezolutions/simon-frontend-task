@@ -48,7 +48,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sho
   \**********************************************/
 /***/ (() => {
 
-eval("\nconst LazyLoadingGrid = {\n  onload() {\n    console.log('works')\n  }\n}\n\n//# sourceURL=webpack://Shopify-theme/./src/js/sections/lazy-loading-grid.js?");
+eval("throw new Error(\"Module parse failed: Unexpected token (8:6)\\nYou may need an appropriate loader to handle this file type, currently no loaders are configured to process this file. See https://webpack.js.org/concepts#loaders\\n| }\\n| \\n> export\");\n\n//# sourceURL=webpack://Shopify-theme/./src/js/sections/lazy-loading-grid.js?");
 
 /***/ }),
 
