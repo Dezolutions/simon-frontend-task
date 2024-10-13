@@ -176,6 +176,7 @@
       "load_more": "Load more",
       "showing": "Showing 1 - ",
       "of": "of",
+      "products_text": "products",
       "unavailable": "Unavailable",
       "vendor": "Vendor",
       "value_unavailable": "{{ option_value }} - Unavailable",
