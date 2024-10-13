@@ -193,7 +193,7 @@
           "label": "Collection"
         },
         "number_of_displayed_products": {
-          "label": "Number of displayed products"
+          "label": "Maximum products to show"
         },
         "products_per_row_desktop": {
           "label": "Products per row on desktop"
